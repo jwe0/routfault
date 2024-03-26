@@ -1,4 +1,4 @@
-import json
+import json, os
 
 
 """
@@ -33,13 +33,16 @@ while True:
 
     elif "&search " in name:
 
+        search_data = name.split(" ")
+        brand = search_data[1].lower()
+        model = search_data[2].lower()
 
-        with open("database.json") as f:
+
+
+        with open(f"Database/{brand}.json") as f:
             config = json.load(f)
 
-            model = name.split(" ")[1].lower()
-
-            if model in config:
+            if f"{brand}.json" in os.listdir("Database"):
 
                 username = config[model]["username"]
                 password = config[model]["password"]
@@ -50,7 +53,7 @@ while True:
 
     elif name == "&help":
         options = """
-&search [ROUTER MODEL]     >     Displays the username and password of the given router model
+&search [BRAND] [MODEL]    >     Displays the username and password of the given router model
 &models                    >     Display all models in database
 &help                      >     Returns this help message 
         """
