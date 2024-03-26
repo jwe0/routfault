@@ -34,7 +34,5 @@ This contains the `client.py` script which is a cli that parses the database for
 ## /Parser
 This takes the folder `/Passwords` that was formed by the `main.py` and turns it into a `database.json` that the `client.py` in `/Finder` uses.
 
-
-
 # Regards
 I take no legal responsiblity for any negative actions commited with my software. This was made for ethical purposes only <3.
