@@ -20,6 +20,14 @@ Routfault is a program that can scrape default password for routers from `https:
 6. Type &help for help commands
 
 
+# Setup
+1. Run the `main.py` to scrape router names and grab the passwords.
+2. The `main.py` will output the `passwords` folder put this in the parser folder and run the `json_parse.py` to form a database folder with all the credentaisl in.
+3. Put the `Database` folder in the `Finder` directory and run the `client.py` to open the cli.
+
+
+
+
 # Directory format explained
 
 ## /Enumerator
@@ -33,6 +41,10 @@ This contains the `client.py` script which is a cli that parses the database for
 
 ## /Parser
 This takes the folder `/Passwords` that was formed by the `main.py` and turns it into a `database.json` that the `client.py` in `/Finder` uses.
+
+
+
+
 
 # Regards
 I take no legal responsiblity for any negative actions commited with my software. This was made for ethical purposes only <3.
